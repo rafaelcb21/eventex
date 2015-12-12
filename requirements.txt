@@ -5,3 +5,4 @@ psycopg2==2.6.1
 python-decouple==3.0
 static3==0.6.1
 wheel==0.24.0
+gunicorn==19.4.1
