@@ -2,6 +2,9 @@
 
 Sistema de Eventos encomendado pela Morena.
 
+[![Build Status](https://travis-ci.org/rafaelcb21/eventex.svg?branch=master)](https://travis-ci.org/rafaelcb21/eventex)
+[![Code Climate](https://codeclimate.com/repos/568a6f67c569b51ab800036e/badges/c75157150dc1aabdb14e/gpa.svg)](https://codeclimate.com/repos/568a6f67c569b51ab800036e/feed)
+
 ## Como desenvolver?
 
 1. Clone o repositório.
