@@ -1,5 +1,5 @@
 from django.test import TestCase
-from eventex.subscriptions.models import Subscription
+from eventex.subscriptions.models import Subscription, hash_
 
 
 class SubscriptionDetailGet(TestCase):
@@ -8,10 +8,11 @@ class SubscriptionDetailGet(TestCase):
             name='Rafael Braga',
             cpf='12345678901',
             email='rafaelcb21@gmail.com',
-            phone='12345678'
+            phone='12345678',
+            key_hash=hash_()
         )
 
-        self.resp = self.client.get('/inscricao/{}/'.format(self.obj.pk))
+        self.resp = self.client.get('/inscricao/{}/'.format(self.obj.key_hash))
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)
