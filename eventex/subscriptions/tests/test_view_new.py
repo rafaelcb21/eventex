@@ -1,12 +1,14 @@
 from django.core import mail
 from django.test import TestCase
+from django.shortcuts import resolve_url as r
 from eventex.subscriptions.forms import SubscriptionForm
-from eventex.subscriptions.models import Subscription, hash_
+from eventex.subscriptions.models import Subscription
 
 
-class SubscribeGet(TestCase):
+
+class SubscriptionsNewGet(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/inscricao/')
+        self.resp = self.client.get(r('subscriptions:new'))
 
     def test_get(self):
         """Get /inscricao/ must return status code 200"""
@@ -37,7 +39,7 @@ class SubscribeGet(TestCase):
         self.assertIsInstance(form, SubscriptionForm)
 
 
-class SubscribePostValid(TestCase):
+class SubscriptionsNewPost(TestCase):
     def setUp(self):
         self.data = {'name': 'Rafael',
                      'cpf': '12345678901',
@@ -45,7 +47,7 @@ class SubscribePostValid(TestCase):
                      'phone': '11-99969-8891',
                      }
 
-        self.resp = self.client.post('/inscricao/', self.data)
+        self.resp = self.client.post(r('subscriptions:new'), self.data)
 
     def test_post(self):
         """Valid POST should redirect to /inscricao/"""
@@ -59,9 +61,9 @@ class SubscribePostValid(TestCase):
         self.assertTrue(Subscription.objects.exists())
 
 
-class SubscribePostInvalid(TestCase):
+class SubscriptionsNewPostInvalid(TestCase):
     def setUp(self):
-        self.resp = self.client.post('/inscricao/', {})
+        self.resp = self.client.post(r('subscriptions:new'), {})
 
     def test_post(self):
         """Invalid POST should not redirect"""
