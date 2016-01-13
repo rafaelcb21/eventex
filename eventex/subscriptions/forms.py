@@ -29,7 +29,7 @@ def validate_cpf(value):
     if len(value) != 11:
         raise ValidationError('CPF deve ter 11 números.', 'length')
 
-    if cpf_bool(value) == False:
+    if cpf_bool(value) is False:
         raise ValidationError('CPF inválido', 'valid')
 
 

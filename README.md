@@ -3,11 +3,14 @@
 Sistema de Eventos encomendado pela Morena.
 
 [![Build Status](https://travis-ci.org/rafaelcb21/eventex.svg?branch=master)](https://travis-ci.org/rafaelcb21/eventex)
+
 [![Code Climate](https://codeclimate.com/repos/568a6f67c569b51ab800036e/badges/c75157150dc1aabdb14e/gpa.svg)](https://codeclimate.com/repos/568a6f67c569b51ab800036e/feed)
+
+[![Code Health](https://landscape.io/github/rafaelcb21/eventex/master/landscape.svg?style=flat)](https://landscape.io/github/rafaelcb21/eventex/master)
 
 ## Como desenvolver?
 
-1. Clone o reposit]orio.
+1. Clone o repositório.
 2. Crie um virtualenv com Python 3.5
 3. Ative o virtualenv.
 4. Instale as dependências.

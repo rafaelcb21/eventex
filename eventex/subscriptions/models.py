@@ -8,7 +8,6 @@ char = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def hash_(size=15, chars=char):
     word = ''.join(SystemRandom().choice(chars) for _ in range(size))
-    '''uuid is used to generate a random number'''
     salt = uuid4().hex
     key_hash = sha1(salt.encode() + word.encode()).hexdigest()
     return key_hash
