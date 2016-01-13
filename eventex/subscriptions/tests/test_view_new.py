@@ -42,7 +42,7 @@ class SubscriptionsNewGet(TestCase):
 class SubscriptionsNewPost(TestCase):
     def setUp(self):
         self.data = {'name': 'Rafael',
-                     'cpf': '12345678901',
+                     'cpf': '12345678909',
                      'email': 'rafael@braga.net',
                      'phone': '11-99969-8891',
                      }
